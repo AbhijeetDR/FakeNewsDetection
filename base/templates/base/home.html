@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+</head>
+<body>
+    <h1>Fake News Detection</h1>
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <form method="post">
+            {% csrf_token %}
+            <textarea id="textInput" style="width: 100%; height: 200px; resize: vertical;" placeholder="Enter news here..." name="text"></textarea>
+            <button style="display: block; margin-top: 10px;">Submit</button>
+            {% if result %}
+                <p>Result: {{result}}</p>
+            {% endif %}
+        </form>
+
+    </div>
+
+</body>
+</html>
